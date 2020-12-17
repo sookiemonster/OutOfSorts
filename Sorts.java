@@ -12,14 +12,17 @@ public class Sorts {
   }
 
   public static void bubbleSort(int[] data) {
-    boolean swapped = false;
-    while (swapped) {
-      swapped = false;
-      int maxLength = data.length;
+    int maxLength = data.length;
+    int swapCount;
+    while (maxLength > 0) {
+      swapCount = 0;
       for (int i = 0; i < maxLength; i++) {
         if (swap(data, i)) {
-          swapped = true;
+          swapCount++;
         }
+      }
+      if (swapCount == 0) {
+        maxLength = 0;
       }
       maxLength--;
     }

@@ -6,6 +6,10 @@ public class Driver {
     int[] a = {2, 3, 6 , 4, 1, 0};
     Sorts.bubbleSort(a);
     System.out.println(Arrays.toString(a));
-    Sorts.bubbleSort(a);
+
+    int[] b = {1, 2, 3};
+    Sorts.bubbleSort(b);
+    System.out.println(Arrays.toString(b));
+
   }
 }
