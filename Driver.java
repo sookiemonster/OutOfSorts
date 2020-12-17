@@ -11,6 +11,10 @@ public class Driver {
     Sorts.bubbleSort(b);
     System.out.println(Arrays.toString(b));
 
+    int[] c = {1, 1, 2, 4, 3, 3, 0, 0};
+    Sorts.bubbleSort(c);
+    System.out.println(Arrays.toString(c));
+
     bubbleTest(10);
     bubbleTest(0);
     bubbleTest(1);
