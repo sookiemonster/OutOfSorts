@@ -1,7 +1,7 @@
 public class Sorts {
 
 
-  private static boolean swap(int[] data, int x) {
+  private static boolean bubbleSwap(int[] data, int x) {
     if (x+1 < data.length && data[x] > data[x+1]) {
       int temp = data[x];
       data[x] = data[x+1];
@@ -17,7 +17,7 @@ public class Sorts {
     while (maxLength > 0) {
       swapCount = 0;
       for (int i = 0; i < maxLength; i++) {
-        if (swap(data, i)) {
+        if (bubbleSwap(data, i)) {
           swapCount++;
         }
       }
@@ -26,5 +26,14 @@ public class Sorts {
       }
       maxLength--;
     }
+  }
+
+  public static void swap(int[] data, int x, int y) {
+    int temp = data[x];
+    data[x] = y;
+    data[y] = temp;
+  }
+
+  public static void selectionSort(int[] data) {
   }
 }
