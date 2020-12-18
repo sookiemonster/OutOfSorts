@@ -30,10 +30,19 @@ public class Sorts {
 
   public static void swap(int[] data, int x, int y) {
     int temp = data[x];
-    data[x] = y;
+    data[x] = data[y];
     data[y] = temp;
   }
 
   public static void selectionSort(int[] data) {
+    int minIndex = 0;
+    for (int i = 0; i < data.length - 1; i++) {
+      for (int j = i; j < data.length; j++) {
+        if (data[j] < data[minIndex]) {
+          minIndex = j;
+        }
+      }
+      swap(data, minIndex, i);
+    }
   }
 }

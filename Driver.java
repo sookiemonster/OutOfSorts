@@ -20,6 +20,17 @@ public class Driver {
     bubbleTest(1);
     bubbleTest(2);
     bubbleTest(20);
+
+    // SELECTION SORT ------------------------------
+
+    System.out.println();
+    System.out.println("Selection Sort Test: \n");
+
+    int[] ss = {2, 3, 6 , 4, 1, 0};
+    System.out.println(Arrays.toString(ss));
+    Sorts.selectionSort(ss);
+    System.out.println(Arrays.toString(ss));
+
   }
 
   public static void randArray(int[] arr) {
@@ -34,6 +45,14 @@ public class Driver {
     randArray(arr);
     System.out.println(Arrays.toString(arr));
     Sorts.bubbleSort(arr);
+    System.out.println(Arrays.toString(arr));
+  }
+
+  public static void selectionTest (int len) {
+    int[] arr = new int[len];
+    randArray(arr);
+    System.out.println(Arrays.toString(arr));
+    Sorts.selectionSort(arr);
     System.out.println(Arrays.toString(arr));
   }
 }
