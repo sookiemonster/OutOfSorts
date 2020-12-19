@@ -30,6 +30,8 @@ public class Driver {
     System.out.println(Arrays.toString(ss));
     Sorts.selectionSort(ss);
     System.out.println(Arrays.toString(ss));
+    Sorts.selectionSort(ss);
+    System.out.println(Arrays.toString(ss));
 
   }
 

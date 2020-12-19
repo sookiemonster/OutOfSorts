@@ -42,7 +42,9 @@ public class Sorts {
           minIndex = j;
         }
       }
-      swap(data, minIndex, i);
+      if (data[i] > data[minIndex] && i < minIndex) {
+        swap(data, minIndex, i);
+      }
     }
   }
 }
