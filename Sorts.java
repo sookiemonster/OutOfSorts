@@ -37,12 +37,13 @@ public class Sorts {
   public static void selectionSort(int[] data) {
     int minIndex = 0;
     for (int i = 0; i < data.length - 1; i++) {
+      minIndex = data.length - 1;
       for (int j = i; j < data.length; j++) {
         if (data[j] < data[minIndex]) {
           minIndex = j;
         }
       }
-      if (data[i] > data[minIndex] && i < minIndex) {
+      if (data[i] > data[minIndex]) {
         swap(data, minIndex, i);
       }
     }
