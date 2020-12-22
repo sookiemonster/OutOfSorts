@@ -56,7 +56,7 @@ public class Driver {
     // Sorts.insertionSort(a);
     // System.out.println(Arrays.toString(a));
 
-    insertionTest(8);
+    insertionTest(20);
   }
 
   public static int[] randArray(int len) {
@@ -168,7 +168,7 @@ public class Driver {
 
     // Random Array Sort
     int[] a1 = randArray(len);
-    System.out.println("Original Array: \n" + Arrays.toString(a1) + "\n");
+    // System.out.println("Original Array: \n" + Arrays.toString(a1) + "\n");
     int[] a1check = Arrays.copyOf(a1, a1.length);
     Arrays.sort(a1check);
     Sorts.insertionSort(a1);
