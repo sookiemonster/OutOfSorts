@@ -48,4 +48,37 @@ public class Sorts {
       }
     }
   }
+
+  // public static void swapUp(int[] arr, int element, int elementIndex) {
+  //   if (element < arr[elementIndex-1]) {
+  //     for (int j = elementIndex - 1; j >= 0; j--) {
+  //       if (element < arr[j] && j > 0) {
+  //         arr[j] = arr[j-1];
+  //       } else if (j == 0) {
+  //         arr[0] = element;
+  //       } else {
+  //         arr[j] = element;
+  //         j = -1;
+  //       }
+  //     }
+  //   }
+  // }
+
+  public static void insertionSort(int[] data) {
+    for (int i = 1; i < data.length; i++) {
+      int element = data[i];
+      if (element < data[i-1]) {
+        for (int j = i - 1; j >=0; j--) {
+          data[j+1] = data[j];
+          if (j==0) {
+            data[0] = element;
+            break;
+          } else if (data[j] >= element && data[j-1] <= element) {
+            data[j] = element;
+            break;
+          }
+        }
+      }
+    }
+  }
 }

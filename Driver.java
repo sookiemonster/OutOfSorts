@@ -49,6 +49,14 @@ public class Driver {
 
     selectionTest(20);
 
+    // SELECTION SORT ------------------------------
+
+    // int[] a = {4, 3, 2, 1};
+    // System.out.println(Arrays.toString(a));
+    // Sorts.insertionSort(a);
+    // System.out.println(Arrays.toString(a));
+
+    insertionTest(8);
   }
 
   public static int[] randArray(int len) {
@@ -150,6 +158,36 @@ public class Driver {
     int[] a3check = Arrays.copyOf(a3, a3.length);
     Arrays.sort(a3check);
     Sorts.selectionSort(a3);
+    checkCorrect(a3, a3check, "Random Reverse Sorted Array");
+  }
+
+  public static void insertionTest (int len) {
+    System.out.println();
+    System.out.println("Insertion Test:");
+
+
+    // Random Array Sort
+    int[] a1 = randArray(len);
+    System.out.println("Original Array: \n" + Arrays.toString(a1) + "\n");
+    int[] a1check = Arrays.copyOf(a1, a1.length);
+    Arrays.sort(a1check);
+    Sorts.insertionSort(a1);
+    checkCorrect(a1, a1check, "Random Array Sort");
+
+    // Random Sorted Array Sort
+    int[] a2 = randSorted(len);
+    // System.out.println("Original Array: \n" + Arrays.toString(a2) + "\n");
+    int[] a2check = Arrays.copyOf(a2, a2.length);
+    Arrays.sort(a2check);
+    Sorts.insertionSort(a2);
+    checkCorrect(a2, a2check, "Random Sorted Array");
+
+    // Random Reverse Sorted Array Sort
+    int[] a3 = randReverse(len);
+    // System.out.println("Original Array: \n" + Arrays.toString(a3) + "\n");
+    int[] a3check = Arrays.copyOf(a3, a3.length);
+    Arrays.sort(a3check);
+    Sorts.insertionSort(a3);
     checkCorrect(a3, a3check, "Random Reverse Sorted Array");
   }
 }
