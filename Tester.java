@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 import java.util.ArrayList;
 
-public class Driver {
+public class Tester {
   public static void main(String[] args) {
     // int[] a = {2, 3, 6 , 4, 1, 0};
     // Sorts.bubbleSort(a);
